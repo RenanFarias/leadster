@@ -7,6 +7,7 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :nhbrhd
       t.string :state
+      t.contact :belongs_to
 
       t.timestamps
     end

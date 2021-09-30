@@ -14,6 +14,7 @@ class AddressesTest < ApplicationSystemTestCase
     visit addresses_url
     click_on "New Address"
 
+    fill_in "Belongs to", with: @address.belongs_to
     fill_in "City", with: @address.city
     fill_in "Nhbrhd", with: @address.nhbrhd
     fill_in "Numberadrss", with: @address.numberadrss
@@ -30,6 +31,7 @@ class AddressesTest < ApplicationSystemTestCase
     visit addresses_url
     click_on "Edit", match: :first
 
+    fill_in "Belongs to", with: @address.belongs_to
     fill_in "City", with: @address.city
     fill_in "Nhbrhd", with: @address.nhbrhd
     fill_in "Numberadrss", with: @address.numberadrss
