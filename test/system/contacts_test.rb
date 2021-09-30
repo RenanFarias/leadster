@@ -15,15 +15,9 @@ class ContactsTest < ApplicationSystemTestCase
     click_on "New Contact"
 
     fill_in "Bday", with: @contact.bday
-    fill_in "City", with: @contact.city
     fill_in "Cpf", with: @contact.cpf
     fill_in "Email", with: @contact.email
     fill_in "Name", with: @contact.name
-    fill_in "Nhbrhd", with: @contact.nhbrhd
-    fill_in "Numberadrss", with: @contact.numberadrss
-    fill_in "State", with: @contact.state
-    fill_in "Street", with: @contact.street
-    fill_in "Zip", with: @contact.zip
     click_on "Create Contact"
 
     assert_text "Contact was successfully created"
@@ -35,15 +29,9 @@ class ContactsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Bday", with: @contact.bday
-    fill_in "City", with: @contact.city
     fill_in "Cpf", with: @contact.cpf
     fill_in "Email", with: @contact.email
     fill_in "Name", with: @contact.name
-    fill_in "Nhbrhd", with: @contact.nhbrhd
-    fill_in "Numberadrss", with: @contact.numberadrss
-    fill_in "State", with: @contact.state
-    fill_in "Street", with: @contact.street
-    fill_in "Zip", with: @contact.zip
     click_on "Update Contact"
 
     assert_text "Contact was successfully updated"

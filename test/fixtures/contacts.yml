@@ -5,21 +5,9 @@ one:
   cpf: 1
   email: MyString
   bday: 2021-09-30
-  zip: 1
-  street: MyString
-  numberadrss: 1
-  city: MyString
-  nhbrhd: MyString
-  state: MyString
 
 two:
   name: MyString
   cpf: 1
   email: MyString
   bday: 2021-09-30
-  zip: 1
-  street: MyString
-  numberadrss: 1
-  city: MyString
-  nhbrhd: MyString
-  state: MyString

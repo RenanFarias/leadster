@@ -10,19 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_30_224713) do
+ActiveRecord::Schema.define(version: 2021_09_30_233142) do
 
-  create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.integer "cpf", limit: 11
-    t.string "email"
-    t.date "bday"
+  create_table "addresses", force: :cascade do |t|
     t.integer "zip"
     t.string "street"
     t.integer "numberadrss"
     t.string "city"
     t.string "nhbrhd"
     t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.integer "cpf", limit: 11
+    t.string "email"
+    t.date "bday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cpf"], name: "index_contacts_on_cpf", unique: true
