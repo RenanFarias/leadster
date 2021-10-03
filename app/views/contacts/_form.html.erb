@@ -27,8 +27,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :bday %>
-    <%= form.date_select :bday %>
+    <%= form.label :bday %> 
+    <%= form.date_select("bday", start_year: 1900, order: [:day, :month, :year])%>
+   
   </div>
 
   <div class="actions">

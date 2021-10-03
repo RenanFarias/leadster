@@ -1,3 +1,92 @@
+<div class="container bootstrap snippets bootdeys bootdey">
+    <div class="row decor-default">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <div class="contacts-labels">
+            <div class="title">All contacts<span>76</span></div>
+            <div class="list">
+              <div class="input-group">
+                <input type="text" class="contacts-search" placeholder="Search">
+              </div>
+              <%= link_to 'New Contact', new_contact_path,  class:'btn btn-primary font-weight-700 mt-2'%>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-8 col-sm-12">
+          <div class="contacts-list">
+            <h5 class="title">Contact List</h5>
+    
+            <form class="ac-custom ac-checkbox ac-checkmark" autocomplete="off">
+              <div class="input-group">
+                <input type="text" class="contacts-list-search" placeholder="Search">
+              </div>
+              <div class="unit head">
+                <div class="field name">
+                  Name
+                </div>
+                <div class="field email">
+                  e-Mail
+                </div>
+                <div class="field bday">
+                  Birthday 
+                </div>
+                <div class="field actions">
+                  Actions
+                </div>
+              </div>
+              <% @contacts.each do |contact| %>
+                
+                <div class="unit">
+                <div class="field name">
+                  <div class="check">
+                    <input id="cb2" name="cb1" type="checkbox">
+                    <label for="cb2"></label>
+                  </div>
+                  
+                 
+                </div>
+                <div class="field name">
+                  <%= contact.name %>
+                </div>
+                <div class="field email">
+                  <%= contact.email %>
+                </div>
+                <% if contact.bday != nil then%>
+                  <div class="field bday">
+                    <%= contact.bday.strftime("%d/%m/%Y")   %>
+                  </div>
+                  <% else %>
+                    <div class="field bday muted">Empty</div>
+                <%end%>
+                <div class="field actions">
+                  <%= link_to 'Show', contact %>
+                  <%= link_to 'Edit', edit_contact_path(contact) %>
+                  <%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+                </div>
+                 
+              </div>
+                
+                
+              <% end %>
+              
+           
+            </form>
+          </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="http://91.234.35.26/iwiki-admin/v1.0.0/admin/css/vendors/checkboxes.css">
+<script src="http://91.234.35.26/iwiki-admin/v1.0.0/admin/js/checkboxes.js"></script>
+
+
+
+
+
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Contacts</h1>
@@ -30,4 +119,4 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+

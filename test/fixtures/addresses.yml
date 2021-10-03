@@ -7,7 +7,7 @@ one:
   city: MyString
   nhbrhd: MyString
   state: MyString
-  belongs_to: 
+  contact: one
 
 two:
   zip: 1
@@ -16,4 +16,4 @@ two:
   city: MyString
   nhbrhd: MyString
   state: MyString
-  belongs_to: 
+  contact: two
